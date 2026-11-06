@@ -12,10 +12,11 @@ streamlit==1.39.0
 opencv-python-headless==4.10.0.84
 
 # 數值運算：矩陣 / 陣列運算（卷積、直方圖統計、PSNR 計算）
-numpy==1.26.4
+# 使用鬆散版本，讓雲端依 Python 版本自動選取有預編譯套件的版本
+numpy>=2.0
 
 # 影像 I/O 與格式轉換（PNG / JPG / BMP 讀取）
-Pillow==10.4.0
+Pillow>=11.0
 
 # 直方圖與影像視覺化繪圖
-matplotlib==3.9.2
+matplotlib>=3.10.0
