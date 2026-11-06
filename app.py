@@ -417,7 +417,7 @@ def main():
         st.subheader("功能 1｜影像載入與基礎解析")
         c1, c2 = st.columns([1, 1])
         with c1:
-            st.image(bgr_to_rgb(img_bgr), caption="原始影像", use_column_width=True)
+            st.image(bgr_to_rgb(img_bgr), caption="原始影像", width="stretch")
         with c2:
             st.markdown("#### 影像中繼資訊")
             # 以 markdown 表格呈現中繼資訊（避免額外引入 pandas 相依套件）
@@ -437,7 +437,7 @@ def main():
         display_img, channels = convert_color_space(img_bgr, mode)
         cc1, cc2 = st.columns([1, 1])
         with cc1:
-            st.image(display_img, caption=f"顯示模式：{mode}", use_column_width=True)
+            st.image(display_img, caption=f"顯示模式：{mode}", width="stretch")
         with cc2:
             fig = plot_histogram(channels)
             st.pyplot(fig)
@@ -482,9 +482,9 @@ def main():
             st.markdown(f"**目前卷積核大小：** {kernel.shape[0]}×{kernel.shape[1]}")
             fc1, fc2 = st.columns([1, 1])
             with fc1:
-                st.image(bgr_to_rgb(img_bgr), caption="濾波前（原始）", use_column_width=True)
+                st.image(bgr_to_rgb(img_bgr), caption="濾波前（原始）", width="stretch")
             with fc2:
-                st.image(bgr_to_rgb(filtered), caption="濾波後", use_column_width=True)
+                st.image(bgr_to_rgb(filtered), caption="濾波後", width="stretch")
 
             # 顯示 PSNR 數值
             st.metric("PSNR (dB)", "無限大" if math.isinf(psnr) else round(psnr, 2))
@@ -497,7 +497,7 @@ def main():
             d1, d2 = st.columns([1, 1])
             with d1:
                 st.image(bgr_to_rgb(annotated), caption="偵測結果（含邊界框）",
-                         use_column_width=True)
+                         width="stretch")
             with d2:
                 st.markdown("#### 偵測結果")
                 st.metric("偵測到的人臉數量", len(faces))
