@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+
+# 報告產生（僅供本地使用，不上傳 GitHub）
+generate_report.py
+generate_word.py
+generate_assets.py
+report_content.py
+assets/
+*.pdf
+*.docx
+lena.jpg
+
+# Streamlit
+.streamlit/secrets.toml
+
+# 暫存
+*.log
+_check.txt
+_page1.png
+
+# 系統
+.DS_Store
+Thumbs.db
