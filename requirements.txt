@@ -8,7 +8,8 @@
 streamlit==1.39.0
 
 # 電腦視覺核心：影像讀取、色彩空間轉換、卷積濾波、Haar-Cascade 人臉偵測
-opencv-python==4.10.0.84
+# 使用 headless 版本，避免在無 GUI 的雲端伺服器（Streamlit Cloud）缺少圖形函式庫
+opencv-python-headless==4.10.0.84
 
 # 數值運算：矩陣 / 陣列運算（卷積、直方圖統計、PSNR 計算）
 numpy==1.26.4
